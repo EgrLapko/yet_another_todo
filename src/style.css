@@ -56,6 +56,9 @@ form {
   text-decoration: line-through;
   opacity: .5; }
 
+.fas {
+  font-size: 1.2rem; }
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -88,13 +91,13 @@ form {
   0% {
     height: 2.5rem; }
   100% {
-    height: 5rem; } }
+    height: 7rem; } }
 
 @keyframes editing {
   0% {
     height: 2.5rem; }
   100% {
-    height: 5rem; } }
+    height: 7rem; } }
 
 .todo {
   display: -webkit-box;
@@ -161,7 +164,7 @@ form {
       transform: translateY(-1rem); }
     .todo__add-btn:focus {
       outline: none; }
-  .todo__btn-white {
+  .todo__btn-edit {
     background-color: unset;
     border: 1px solid #f6f6f6;
     color: #f6f6f6;
@@ -172,11 +175,25 @@ form {
     -webkit-transition: .2s  all ease-in-out;
     -o-transition: .2s  all ease-in-out;
     transition: .2s  all ease-in-out; }
-    .todo__btn-white:focus {
+    .todo__btn-edit:focus {
       outline: none; }
-    .todo__btn-white:hover {
+    .todo__btn-edit:hover {
       background-color: #f6f6f6;
       color: #6a6969; }
+  .todo__btn-save {
+    background-color: unset;
+    font-size: 2rem;
+    color: rgba(246, 246, 246, 0.6);
+    border: none;
+    text-transform: lowercase;
+    cursor: pointer;
+    -webkit-transition: .2s  all ease-in-out;
+    -o-transition: .2s  all ease-in-out;
+    transition: .2s  all ease-in-out; }
+    .todo__btn-save:focus {
+      outline: none; }
+    .todo__btn-save:hover {
+      color: #f6f6f6; }
   .todo__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -225,7 +242,7 @@ form {
     transition: .4s ease-in-out; }
   .todo .--edit {
     background-color: rgba(255, 102, 119, 0.8);
-    height: 5rem;
+    height: 7rem;
     -webkit-animation: .3s ease 0s editing;
     animation: .3s ease 0s editing; }
   .todo__edit-form {
@@ -239,7 +256,7 @@ form {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: 5rem; }
+    height: 7rem; }
     .todo__edit-form input {
       width: 70%;
       color: white;

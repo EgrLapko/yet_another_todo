@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { FaTrashAlt, FaEdit } from 'react-icons/fa';
 
 export default class Todo extends Component {
     state = {
@@ -39,7 +40,7 @@ export default class Todo extends Component {
                 <div className="todo__element --edit">
                     <form className="todo__edit-form" onSubmit={this.handleUpdate}>
                         <input type='text' value={this.state.task} name="task" onChange={this.handleChange} />
-                        <button className="todo__btn-white"> Save </button>
+                        <button className="todo__btn-save"> <i className="far fa-save"></i> </button>
                     </form>
                 </div> 
             );
@@ -50,8 +51,8 @@ export default class Todo extends Component {
                         {this.props.task}
                     </li>
                     <div className="todo__btn-container">
-                        <button className="todo__btn-white" onClick={this.toggleForm}>Edit</button>
-                        <button className="todo__btn-white" onClick={this.handleRemove}>Delete</button>
+                        <button className="todo__btn-edit" onClick={this.toggleForm}><i className="fas fa-pen-square"></i></button>
+                        <button className="todo__btn-edit" onClick={this.handleRemove}><i className="fas fa-trash"></i></button>
                     </div>        
                 </div>
             );

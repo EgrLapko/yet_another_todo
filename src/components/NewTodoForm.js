@@ -8,7 +8,7 @@ export default class NewTodoForm extends Component {
     }
     handleChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value
+            task: e.target.value
         });
     }
     handleSubmit = (e) => {

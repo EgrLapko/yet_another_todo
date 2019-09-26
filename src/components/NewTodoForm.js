@@ -6,7 +6,7 @@ export default class NewTodoForm extends Component {
         return (
             <TodoConsumer>
                 {value => {
-                    const {handleSubmit, task, handleChange} = value;
+                    const {handleSubmit, task, handleChange, callAlert} = value;
                     return (
                         <form onSubmit={handleSubmit}>
                             <input 
@@ -17,7 +17,7 @@ export default class NewTodoForm extends Component {
                                 value={task}
                                 onChange={handleChange}    
                             />
-                            <button className="todo__add-btn" disabled={task.length <= 4}>Add Todo</button>
+                            <button className="todo__add-btn" onClick={() => callAlert()} >Add Todo</button>
                         </form>
                     )
                 }}

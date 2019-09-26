@@ -40,8 +40,10 @@ export default class Todo extends Component {
                             result = (
                                 <div className="todo__element --edit">
                                     <form className="todo__edit-form" onSubmit={this.handleUpdate}>
-                                        <input type='text' value={this.state.localTask} name="localTask" onChange={this.handleEditChange} />
-                                        <button className="todo__btn-save"> <i className="far fa-save"></i> </button>
+                                        <div className="todo__input-container">
+                                            <input type='text' value={this.state.localTask} name="localTask" onChange={this.handleEditChange} />
+                                            <button className="todo__btn-save"> <i className="far fa-save"></i> </button>
+                                        </div>
                                     </form>
                                 </div> 
                             );

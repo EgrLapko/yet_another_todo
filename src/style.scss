@@ -72,7 +72,7 @@ form {
         height: 2.5rem;
     }
     100% {
-        height: 7rem;
+        height: 5rem;
     }
 }
 
@@ -89,7 +89,7 @@ form {
         justify-content: flex-start;
         flex-direction: column;
         width: 30%;
-        min-height: 35rem;
+        min-height: 70vh;
         padding: 1rem;
         background-color: rgba(246, 246, 246, 1);
         border-radius: 4%;
@@ -181,13 +181,13 @@ form {
     }
     .--edit {
         background-color: rgba($begonia, .8);
-        height: 7rem;
+        height: 5rem;
         animation: .3s ease 0s editing;
     }
     &__edit-form {
         @include container;
-        width: 100%;
-        height: 7rem;
+        width: 80%;
+        height: 5rem;
         input {
             width: 70%;
             color: rgba(255, 255, 255, 1);
@@ -195,7 +195,13 @@ form {
             text-transform: lowercase;
         }
     }
+    &__input-container {
+        @include container;
+        justify-content: space-around;
+        width: 100%;
+    }
     &__task {
+        text-align: center;
         width: 70%;
         font-size: 1.1rem;
         padding: .3rem;
@@ -209,5 +215,25 @@ form {
         justify-content: space-around;
         margin-left: auto;
         width: 30%;
+    }
+    &__alert {
+        @include container;
+        width: 15rem;
+        position: fixed;
+        z-index: 99;
+        left: 45%;
+        background-color: rgba(95, 174, 87, .9);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        text-transform: lowercase;
+        font-size: 1.2rem;
+        opacity: 1;
+        transform: translateY(5rem);
+        transition: ease-in-out .4s;
+    }
+    .--active {
+        background-color: yellow;
     }
 }
